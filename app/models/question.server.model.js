@@ -20,6 +20,11 @@ var QuestionSchema = new Schema({
 		type: Number,
 		default: 1
 	},
+	response: {
+		type: String,
+		default: '',
+		trim: true
+	},
 	created: {
 		type: Date,
 		default: Date.now

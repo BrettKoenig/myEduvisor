@@ -54,6 +54,9 @@ var UserSchema = new Schema({
 		required: 'Please fill in a username',
 		trim: true
 	},
+	undergraduate: {
+		type: Boolean
+	},
 	year: {
 		type: String,
 		unique: 'testing error message',

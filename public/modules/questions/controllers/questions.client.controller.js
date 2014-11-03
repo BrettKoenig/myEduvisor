@@ -9,7 +9,7 @@ angular.module('questions').controller('QuestionsController', ['$scope', '$state
 		$scope.create = function() {
 			// Create new Question object
 			var question = new Questions ({
-				name: this.name
+				question: this.question
 			});
 
 			// Redirect after save
@@ -17,7 +17,7 @@ angular.module('questions').controller('QuestionsController', ['$scope', '$state
 				$location.path('questions/' + response._id);
 
 				// Clear form fields
-				$scope.name = '';
+				$scope.question = '';
 			}, function(errorResponse) {
 				$scope.error = errorResponse.data.message;
 			});

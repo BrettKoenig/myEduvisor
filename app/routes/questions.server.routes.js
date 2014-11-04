@@ -7,7 +7,7 @@ module.exports = function(app) {
 	// Questions Routes
 	app.route('/questions')
 		.get(questions.list)
-		.post(users.requiresLogin, questions.create);
+		.post(questions.create);
 
 	app.route('/questions/:questionId')
 		.get(questions.read)

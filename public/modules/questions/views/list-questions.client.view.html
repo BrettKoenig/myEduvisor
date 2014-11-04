@@ -1,11 +1,10 @@
-<section data-ng-controller="QuestionsController as questionsCtrl">
+<section data-ng-controller="QuestionsController" data-ng-init="find()">
     <div class="page-header">
         <h1>Questions</h1>
     </div>
     <div class="list-group">
-        <a data-ng-repeat="question in questionsCtrl.questions" data-ng-href="#!/questions/{{question._id}}" class="list-group-item">
+        <a data-ng-repeat="question in questions" data-ng-href="#!/questions/{{question._id}}" class="list-group-item">
 			<small class="list-group-item-text">
-                {{question.question}}
 				Posted on
 				<span data-ng-bind="question.created | date:'short'"></span>
 				by

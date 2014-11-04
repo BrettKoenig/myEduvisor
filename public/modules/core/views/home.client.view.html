@@ -7,7 +7,7 @@
                     <div class="intro-text" data-ng-controller="QuestionsController">
                         <form data-ng-submit="create()" novalidate>
                              <div class="input-group">
-                                <input type="text" data-ng-model="question" class="col-lg-8 form-control" placeholder="Ask me anything" id="question" required>
+                                <input type="text" data-ng-model="question" ng-model="searchText" class="col-lg-8 form-control" placeholder="Ask me anything" id="question" required>
                                 <span class="input-group-btn">
                                 <button type="submit" class="btn btn-primary btn-small">Advice <i class="glyphicon glyphicon-search"></i></button>
                              </div>
@@ -15,7 +15,6 @@
                     <strong data-ng-bind="error"></strong>
                 </div>
                          </form>
-                            
                         
                         <hr class="star-light">
                         <span class="skills">An Online Advisor - Whenever you need, wherever you need.</span>
